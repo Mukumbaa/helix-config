@@ -41,3 +41,4 @@ esc = ["normal_mode",":write-all!"]
 esc = ["normal_mode",":write-all!"]
 #select the next occurence of the selected text
 "C-d" = ["search_selection", "extend_search_next"]
+
