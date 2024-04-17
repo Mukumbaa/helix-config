@@ -20,7 +20,8 @@ select = "underline"
 "A-w" = [":write-all!"]
 "C-q" = ":write-buffer-close!"
 #append remap in order to not see the selection 
-"a" = ["move_prev_word_start","move_next_word_end","move_char_right","insert_mode"]
+# "a" = ["move_prev_word_start","move_next_word_end","move_char_right","insert_mode"]
+"a" = ["move_char_right","insert_mode"]
 #tab remap to move between buffers
 "tab" = "goto_next_buffer"
 "S-tab" = "goto_previous_buffer"
