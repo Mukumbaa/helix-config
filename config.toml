@@ -18,7 +18,8 @@ esc = ":w!"
 "A-w" = [":write-all!"]
 "C-q" = ":write-buffer-close!"
 #append remap in order to not see the selection 
-"a" = ["move_char_right","move_char_left", "insert_mode"]
+# "a" = ["move_char_right","move_char_left", "insert_mode"]
+"a" = ["move_prev_word_start","move_next_word_end","move_char_right","insert_mode"]
 #tab remap to move between buffers
 "tab" = "goto_next_buffer"
 "S-tab" = "goto_previous_buffer"
@@ -33,11 +34,10 @@ esc = ":w!"
 
 [keys.insert]
 esc = ["normal_mode",":write-all!"]
-"C-right" = ["normal_mode","move_next_word_start","move_char_right","move_char_left","insert_mode"] 
+"C-right" = ["normal_mode","move_next_word_end","move_char_right","insert_mode"] 
 "C-left" = ["normal_mode","move_prev_word_start","move_char_left","move_char_right","insert_mode"] 
 
 [keys.select]
 esc = ["normal_mode",":write-all!"]
 #select the next occurence of the selected text
 "C-d" = ["search_selection", "extend_search_next"]
-
