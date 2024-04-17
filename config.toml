@@ -39,7 +39,7 @@ esc = ["normal_mode",":write-all!"]
 "C-right" = ["normal_mode","move_next_word_end","move_char_right","insert_mode"] 
 # "C-left" = ["normal_mode","move_prev_word_start","move_char_left","move_char_right","insert_mode"] 
 "C-left" = ["normal_mode","move_prev_word_start","insert_mode","move_char_right","move_char_left"] 
-
+"C-v" = ["normal_mode","paste_before","insert_mode"]
 [keys.select]
 esc = ["normal_mode",":write-all!"]
 #select the next occurence of the selected text
