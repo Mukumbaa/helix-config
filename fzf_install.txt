@@ -1,0 +1,9 @@
+#exex this commands
+
+Set-ExecutionPolicy RemoteSigned
+#scoop install
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+irm get.scoop.sh | iex
+
+#fzf install
+winget install fzf
