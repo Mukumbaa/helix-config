@@ -6,6 +6,7 @@ mouse = false
 cursorline = true
 bufferline = "multiple"
 color-modes = true
+completion-trigger-len = 1
 
 [editor.cursor-shape]
 insert = "bar"
@@ -33,13 +34,22 @@ select = "underline"
 "A-S-up" = ["extend_to_line_bounds","yank","paste_before"]
 #start the selection
 "C-d" = ["keep_primary_selection", "move_prev_word_start", "move_next_word_end", "search_selection", "select_mode"]
+"A-j" = ["move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down"]
+"A-k" = ["move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up"]
+"y" = "yank_main_selection_to_clipboard"
+"p" = "paste_clipboard_before"
 
 [keys.insert]
 esc = ["normal_mode",":write-all!"]
-"C-right" = ["normal_mode","move_next_word_end","move_char_right","insert_mode"] 
+"C-l" = ["normal_mode","move_next_word_end","move_char_right","insert_mode"] 
 # "C-left" = ["normal_mode","move_prev_word_start","move_char_left","move_char_right","insert_mode"] 
-"C-left" = ["normal_mode","move_prev_word_start","insert_mode","move_char_right","move_char_left"] 
-"C-v" = ["normal_mode","paste_before","insert_mode"]
+"C-h" = ["normal_mode","move_prev_word_start","insert_mode","move_char_right","move_char_left"] 
+"C-v" = ["normal_mode","paste_clipboard_before","insert_mode"]
+"A-h" =["normal_mode","move_char_left","insert_mode"]
+"A-l" =["normal_mode","move_char_right","insert_mode"]
+"A-j" =["normal_mode","move_visual_line_down","insert_mode"]
+"A-k" =["normal_mode","move_visual_line_up","insert_mode"]
+
 
 [keys.select]
 esc = ["normal_mode",":write-all!"]
@@ -49,3 +59,19 @@ esc = ["normal_mode",":write-all!"]
 [keys.normal."+"]
 #create new terminal
 "+" = ':sh start alacritty'
+
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control"]
+center = ["file-name"]
+right = [ "diagnostics",
+  "selections",
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "file-type",
+]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
