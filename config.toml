@@ -2,7 +2,7 @@ theme="catppuccin_mocha"
 
 [editor]
 line-number = "relative"
-mouse = false
+mouse = true
 cursorline = true
 bufferline = "multiple"
 color-modes = true
@@ -40,11 +40,12 @@ select = "underline"
 "p" = "paste_clipboard_before"
 
 [keys.insert]
-esc = ["normal_mode",":write-all!"]
+esc = [":w!", "normal_mode"]
 "C-l" = ["normal_mode","move_next_word_end","move_char_right","insert_mode"] 
-# "C-left" = ["normal_mode","move_prev_word_start","move_char_left","move_char_right","insert_mode"] 
 "C-h" = ["normal_mode","move_prev_word_start","insert_mode","move_char_right","move_char_left"] 
-"C-v" = ["normal_mode","paste_clipboard_before","insert_mode"]
+# "C-left" = ["normal_mode","move_prev_word_start","move_char_left","move_char_right","insert_mode"] 
+"C-v" = ["normal_mode","paste_clipboard_before","append_mode","move_char_right","move_char_left"] 
+#movement with hjkl in insert mode
 "A-h" =["normal_mode","move_char_left","insert_mode"]
 "A-l" =["normal_mode","move_char_right","insert_mode"]
 "A-j" =["normal_mode","move_visual_line_down","insert_mode"]
@@ -58,20 +59,32 @@ esc = ["normal_mode",":write-all!"]
 
 [keys.normal."+"]
 #create new terminal
-"+" = ':sh start alacritty'
+"+" = ':sh na'
 
 
 [editor.statusline]
-left = ["mode", "spinner", "version-control"]
+left = [
+  "mode", 
+  "spacer",
+  "spinner", 
+  "spacer",
+  "version-control"
+]
 center = ["file-name"]
-right = [ "diagnostics",
+right = [ 
+  "diagnostics",
+  "spacer",
   "selections",
+  "spacer",
   "position",
+  "spacer",
   "file-encoding",
+  "spacer",
   "file-line-ending",
+  "spacer",
   "file-type",
 ]
-separator = "│"
+separator = "  "
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
