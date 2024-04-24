@@ -41,15 +41,15 @@ select = "underline"
 
 [keys.insert]
 esc = [":w!", "normal_mode"]
-"C-l" = ["normal_mode","move_next_word_end","move_char_right","insert_mode"] 
-"C-h" = ["normal_mode","move_prev_word_start","insert_mode","move_char_right","move_char_left"] 
+"C-right" = ["normal_mode","move_next_word_end","move_char_right","insert_mode"] 
+"C-left" = ["normal_mode","move_prev_word_start","insert_mode","move_char_right","move_char_left"] 
 # "C-left" = ["normal_mode","move_prev_word_start","move_char_left","move_char_right","insert_mode"] 
 "C-v" = ["normal_mode","paste_clipboard_before","append_mode","move_char_right","move_char_left"] 
 #movement with hjkl in insert mode
-"A-h" =["normal_mode","move_char_left","insert_mode"]
-"A-l" =["normal_mode","move_char_right","insert_mode"]
-"A-j" =["normal_mode","move_visual_line_down","insert_mode"]
-"A-k" =["normal_mode","move_visual_line_up","insert_mode"]
+"A-left" =["normal_mode","move_char_left","insert_mode"]
+"A-right" =["normal_mode","move_char_right","insert_mode"]
+"A-down" =["normal_mode","move_visual_line_down","insert_mode"]
+"A-up" =["normal_mode","move_visual_line_up","insert_mode"]
 
 
 [keys.select]
