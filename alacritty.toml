@@ -1,7 +1,0 @@
-working_directory = "C:\\Users\\gabry\\Documents"
-[window]
-startup_mode = "Maximized"
-title = "Alacritty"
-dynamic_title = false
-[font]
-size = 12
