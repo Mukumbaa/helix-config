@@ -13,6 +13,12 @@ insert = "bar"
 normal = "block"
 select = "underline"
 
+[editor.lsp]
+# Disable automatically popups of signature parameter help
+auto-signature-help = false
+#LSP messages in the status line
+display-messages = true
+
 [keys.normal]
 "esc" = ":w!"
 "C-A-[" = { d = "goto_prev_diag", D = "goto_first_diag", f = "goto_prev_function", c = "goto_prev_comment", a = "goto_prev_parameter", t = "goto_prev_class", p = "goto_prev_paragraph", T = "goto_prev_test", g = "goto_prev_change", G = "goto_first_change", space = "add_newline_above" }
