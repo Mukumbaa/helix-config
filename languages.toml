@@ -1,18 +1,17 @@
-#pip install ruff
-#pip install pylyzer
-#npm install pyright -g
+# PYTHON
+#pip install ruff basedpyright (also in the venv)
+
 [[language]]
 name = "python"
-language-servers = ["pyright", "ruff", "pylyzer"]
-[language-server.pyright.config.python.analysis]
-typeCheckingMode = "basic"
+language-servers = ["basedpyright", "ruff"]
+[language-server.basedpyright.config.python.analysis]
+typeCheckingMode = "off"
 [language-server.ruff]
 command = "ruff"
 args = ["server"]
-[language-server.pylyzer]
-command = "pylyzer"
-args = ["--server"]
 
+
+# JAVASCRIPT / TYPESCRIPT
 #npm install -g typescript typescript-language-server
 #npm i -g vscode-langservers-extracted@4.8
 [[language]]
@@ -27,3 +26,20 @@ language-servers = [
   "typescript-language-server",
   "vscode-eslint-language-server",
 ]
+
+# GO
+# go install golang.org/x/tools/gopls@latest                            # LSP
+# go install github.com/nametake/golangci-lint-langserver@latest        # Linter
+# go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest # Linter cli
+# go install golang.org/x/tools/cmd/goimports@latest                    # Formatter
+# go install github.com/go-delve/delve/cmd/dlv@latest                   # Debugger
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports" }
+
+# C
+# scoop bucket add main
+# scoop install main/mingw
+# scoop bucket add main
+# scoop install main/clangd
