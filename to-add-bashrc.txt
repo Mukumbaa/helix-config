@@ -1,0 +1,24 @@
+command_not_found_handle() {
+    echo "Comand '$1' not found. Searching..."
+
+    # Cerca con whatprovides
+    pkg=$(dnf4 whatprovides "*/$1" 2>/dev/null | grep -E "^[^ ]+\.[a-z0-9_+-]+ :" | head -n1 | cut -d: -f1)
+
+    # Se non trova nulla, prova con search
+    if [ -z "$pkg" ]; then
+        pkg=$(dnf4 search "$1" 2>/dev/null | grep -E "^[^ ]+\.[a-z0-9_+-]+ :" | head -n1 | cut -d: -f1)
+    fi
+
+    if [ -n "$pkg" ]; then
+        echo "Can be install with:"
+        echo "  sudo dnf install $1"
+        read -p "Do you want to proceed? [y/N] " answer
+        if [[ "$answer" =~ ^[Yy]$ ]]; then
+            sudo dnf install "$1"
+        fi
+    else
+        echo "No '$1' package found."
+    fi
+
+    return 127
+}
