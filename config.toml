@@ -34,15 +34,24 @@ display-messages = true
 [editor.gutters]
 layout = ["diagnostics", "line-numbers", "spacer", "spacer"]
 
+[keys.normal."m"]
+"w" = "@miw"
+"W" = "@miW"
+"\"" = "@f\"lmi\""
+"'" = "@f'lmi'"
+"(" = "@f(lmi("
+"A-C-[" = "@f[lmi<A-C-[>"
+"A-C-{" = "@f{lmi<A-C-{>"
 
 [keys.normal."+"]
 "+" = ":config-open"
 "*" = ":config-reload"
+"l" = ":open C:\\Users\\Gabry\\AppData\\Roaming\\helix\\languages.toml"
 "b" = ":buffer-close"
 "B" = ":buffer-close-others"
 "a" = "@]as[^,]*<ret>"
 "A" = "@[as[^,]*<ret>"
-"s" = "goto_line_start"
+"s" = "goto_first_nonwhitespace"
 "e" = "goto_line_end"
 
 [keys.normal]
