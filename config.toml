@@ -85,6 +85,7 @@ layout = ["diagnostics", "line-numbers", "spacer", "spacer"]
 "w" = ["move_next_word_end","trim_selections"]
 "b" = ["flip_selections","move_prev_word_start","trim_selections","flip_selections"]
 "d" = ["yank_main_selection_to_clipboard", "delete_selection"]
+"A-x" = "@gsvgl<esc>"
 
 [keys.insert]
 esc = [":w!", "normal_mode"]
