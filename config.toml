@@ -51,8 +51,8 @@ layout = ["diagnostics", "line-numbers", "spacer", "spacer"]
 "B" = ":buffer-close-others"
 "a" = "@]as[^,]*<ret>"
 "A" = "@[as[^,]*<ret>"
-"s" = "goto_first_nonwhitespace"
-"e" = "goto_line_end"
+"s" = "@vh<A-;>l<A-;><esc>"
+"\"" = "@f\"f\"vh<A-;>l<A-;><esc>"
 
 [keys.normal]
 "esc" = ":w!"
@@ -84,7 +84,7 @@ layout = ["diagnostics", "line-numbers", "spacer", "spacer"]
 #remap to trim whitespacese and for b to face always forward
 "w" = ["move_next_word_end","trim_selections"]
 "b" = ["flip_selections","move_prev_word_start","trim_selections","flip_selections"]
-"d" = ["yank_main_selection_to_clipboard", "delete_selection"]
+"A-d" = ["yank_main_selection_to_clipboard", "delete_selection"]
 "A-x" = "@gsvgl<esc>"
 
 [keys.insert]
