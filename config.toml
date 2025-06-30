@@ -1,4 +1,5 @@
-theme="catppuccin_mocha"
+# theme="catppuccin_mocha"
+theme="rose_pine"
   
 [editor]
 line-number = "relative"
@@ -86,6 +87,7 @@ layout = ["diagnostics", "line-numbers", "spacer", "spacer"]
 "b" = ["flip_selections","move_prev_word_start","trim_selections","flip_selections"]
 "A-d" = ["yank_main_selection_to_clipboard", "delete_selection"]
 "A-x" = "@gsvgl<esc>"
+"D" =["goto_first_nonwhitespace", "select_mode", "goto_line_end", "change_selection"]
 
 [keys.insert]
 esc = [":w!", "normal_mode"]
