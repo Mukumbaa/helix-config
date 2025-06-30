@@ -35,8 +35,8 @@ language-servers = [
 # go install github.com/go-delve/delve/cmd/dlv@latest                   # Debugger
 [[language]]
 name = "go"
-auto-format = true
-formatter = { command = "goimports" }
+auto-format = false
+# formatter = { command = "goimports" }
 
 # C
 # scoop bucket add main
