@@ -18,28 +18,3 @@ command_not_found_handle() {
 
     return 127
 }
-
-
-
-
-
-[general]
-import = [
-  "C:\\Users\\Gabry\\AppData\\Roaming\\alacritty\\themes\\rose_pine.toml"
-]
-live_config_reload = true
-working_directory = "C:\\Users\\Gabry\\Documents"
-
-[window]
-dynamic_padding = false
-resize_increments = true
-dimensions = { columns = 120, lines = 30 }
-position = { x = 240, y = 250 }
-# decorations = "None"
-
-[font]
-normal = { family = "DepartureMono Nerd Font Mono", style = "Regular"}
-size = 12
-
-[terminal]
-shell = "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
